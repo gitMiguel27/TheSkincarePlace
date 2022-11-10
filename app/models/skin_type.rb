@@ -1,0 +1,2 @@
+class SkinType < ApplicationRecord
+end
