@@ -1,4 +1,5 @@
 import './SkinType.css';
+import React from 'react';
 
 function SkinType() {
     return (

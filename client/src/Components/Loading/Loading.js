@@ -1,11 +1,29 @@
 import './Loading.css';
+import React, { useState, useEffect } from 'react';
 
 function Loading() {
+
+  const [skintypes, setSkintypes] = useState([]);
+
+  useEffect(() => {
+    fetch("/skin_types")
+    .then(resp => resp.json())
+    .then(skintypesData => {
+      // console.log(skintypesData);
+      setSkintypes(skintypesData);
+    });
+  }, []);
+
   return (
     <div className="Loading">
       <h3>Welcome to The Skincare Place!</h3>
       <h2>Choose Your Skin Type:</h2>
-      <p>Dry <br/> Oily <br/> Combination <br/> Normal</p>
+      {
+        skintypes.map(skintype => {
+          return <p key={skintype.id}>{skintype.name}</p>
+        })
+      }
+      {/* <p>Dry <br/> Oily <br/> Combination <br/> Normal</p> */}
 
       <p>Don't know your skin type?
         <br/>
