@@ -16,7 +16,7 @@ function Loading() {
 
   return (
     <div className="Loading">
-      <h3>Welcome to The Skincare Place!</h3>
+      <h1>Welcome to The Skincare Place!</h1>
       <h2>Choose Your Skin Type:</h2>
       {
         skintypes.map(skintype => {

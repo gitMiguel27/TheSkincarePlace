@@ -1,11 +1,15 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 function App() {
+  let location = useLocation();
+
   return (
     <div className="App">
-      {/* <Navbar user={user} setUser={setUser}/> */}
+      {location === '/' || '/loading'? null : <Navbar/>}
         <Routes>
           <Route exact path='/' element={<Loading />}>
           </Route>
@@ -19,7 +23,7 @@ function App() {
           <Route path='/mypage' element={<MyPage user={user} setPoints={setPoints} points={points}/>}>
           </Route> */}
         </Routes>
-      {/* <Footer/> */}
+      {location === '/' || '/loading'? null : <Footer/>}
     </div>
   );
 }
