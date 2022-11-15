@@ -1,18 +1,8 @@
 import './Loading.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 
-function Loading() {
-
-  const [skintypes, setSkintypes] = useState([]);
-
-  useEffect(() => {
-    fetch("/skin_types")
-    .then(resp => resp.json())
-    .then(skintypesData => {
-      // console.log(skintypesData);
-      setSkintypes(skintypesData);
-    });
-  }, []);
+function Loading({ skintypes, selectSkintype }) {
 
   return (
     <div className="Loading">
@@ -20,11 +10,9 @@ function Loading() {
       <h2>Choose Your Skin Type:</h2>
       {
         skintypes.map(skintype => {
-          return <p key={skintype.id}>{skintype.name}</p>
+          return <Link to={skintype.name.toLowerCase()} key={skintype.id} onClick={selectSkintype} >{skintype.name}</Link>
         })
       }
-      {/* <p>Dry <br/> Oily <br/> Combination <br/> Normal</p> */}
-
       <p>Don't know your skin type?
         <br/>
         <a href='https://www.wikihow.com/Determine-Your-Skin-Type' target="_blank" rel="noopener noreferrer">Click Here</a>

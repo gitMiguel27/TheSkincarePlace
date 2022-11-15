@@ -1,10 +1,11 @@
 import './SkinType.css';
 import React from 'react';
 
-function SkinType() {
+function SkinType({ selectedSkintype }) {
+
     return (
         <div className='SkinType'>
-            <h3>Hello from SkinType!</h3>
+            <h3>Hello from {selectedSkintype.name}!</h3>
         </div>
     );
 }
