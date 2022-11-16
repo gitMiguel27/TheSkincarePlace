@@ -8,6 +8,7 @@ import SkinType from '../SkinType/SkinType';
 
 function App() {
   let location = useLocation();
+  console.log(location);
 
   const [skintypes, setSkintypes] = useState([]);
 
@@ -32,11 +33,11 @@ function App() {
 
   return (
     <div className="App">
-      {location === '/' || '/loading'? null : <Navbar/>}
+      {location.pathname.endsWith('/') || location.pathname.endsWith('/loading')? null : <Navbar/> }
         <Routes>
-          <Route exact path='/' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes}/>}>
+          <Route exact path='/' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes} />}>
           </Route>
-          <Route path='/loading' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes}/>}>
+          <Route path='/loading' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes} />}>
           </Route>
           <Route path={'/' + skintypeRoute} element={<SkinType selectedSkintype={selectedSkintype} />}>
           </Route>
@@ -48,7 +49,7 @@ function App() {
           <Route path='/mypage' element={<MyPage user={user} setPoints={setPoints} points={points}/>}>
           </Route> */}
         </Routes>
-      {location === '/' || '/loading'? null : <Footer/>}
+      {location.pathname.endsWith('/') || location.pathname.endsWith('/loading')? null : <Footer/> }
     </div>
   );
 }

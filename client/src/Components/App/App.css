@@ -1,6 +1,3 @@
 body {
-    height: 150vh;
-    background-image: url('../../Images/Background.png');
-    background-repeat:no-repeat;
-    background-size: cover;
+    background-color: #b27066;
 }
