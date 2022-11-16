@@ -1,9 +1,14 @@
-import './SkinType.css';
+// import './SkinType.css';
+import React from 'react';
+import { Typography } from '@mui/material';
 
-function SkinType() {
+function SkinType({ selectedSkintype }) {
+
+    // Fetch skintype using keyword from url
+
     return (
-        <div className='SkinType'>
-            <h3>Hello from SkinType!</h3>
+        <div className='Skintype'>
+            <Typography>Hello from {selectedSkintype.name}!</Typography>
         </div>
     );
 }

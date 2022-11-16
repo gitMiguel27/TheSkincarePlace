@@ -1,21 +1,28 @@
-import './Loading.css';
+// import './Loading.css';
+import React from 'react';
+import { Link } from "react-router-dom";
+import { Typography } from '@mui/material';
 
-function Loading() {
+function Loading({ skintypes, selectSkintype }) {
+
   return (
     <div className="Loading">
-      <h3>Welcome to The Skincare Place!</h3>
-      <h2>Choose Your Skin Type:</h2>
-      <p>Dry <br/> Oily <br/> Combination <br/> Normal</p>
-
-      <p>Don't know your skin type?
+      <Typography variant='h3'>Welcome to The Skincare Place!</Typography>
+      <Typography variant='h5'>Choose Your Skin Type:</Typography>
+      {
+        skintypes.map(skintype => {
+          return <Link to={skintype.name.toLowerCase()} key={skintype.id} onClick={selectSkintype} >{skintype.name}</Link>
+        })
+      }
+      <Typography>Don't know your skin type?
         <br/>
         <a href='https://www.wikihow.com/Determine-Your-Skin-Type' target="_blank" rel="noopener noreferrer">Click Here</a>
-      </p>
+      </Typography>
 
-      <p>Have an account?
+      <Typography>Have an account?
         <br/>
         Log-In
-      </p>
+      </Typography>
     </div>
   );
 }
