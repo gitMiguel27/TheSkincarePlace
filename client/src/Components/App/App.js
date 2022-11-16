@@ -39,9 +39,11 @@ function App() {
           </Route>
           <Route path='/loading' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes} />}>
           </Route>
+
+          {/* URL Parameters react router ; skintype should load data indepently from url parameter (no need to pass in) */}
           <Route path={'/' + skintypeRoute} element={<SkinType selectedSkintype={selectedSkintype} />}>
           </Route>
-
+          
           {/* <Route path='/login' element={<Login setUser={setUser} setPoints={setPoints}/>}>
           </Route>
           <Route path='/signup' element={<Signup setUser={setUser}/>}>
