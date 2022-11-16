@@ -9,6 +9,7 @@ function SkinType({ selectedSkintype }) {
     return (
         <div className='Skintype'>
             <Typography>Hello from {selectedSkintype.name}!</Typography>
+            <Typography>{selectedSkintype.body}</Typography>
         </div>
     );
 }
