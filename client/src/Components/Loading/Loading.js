@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Typography } from '@mui/material';
 
-function Loading({ skintypes, selectSkintype }) {
+function Loading({ skintypes }) {
 
   return (
     <div className="Loading">
@@ -11,7 +11,7 @@ function Loading({ skintypes, selectSkintype }) {
       <Typography variant='h5'>Choose Your Skin Type:</Typography>
       {
         skintypes.map(skintype => {
-          return <Link to={skintype.name.toLowerCase()} key={skintype.id} onClick={selectSkintype} >{skintype.name}</Link>
+          return <Link to={skintype.name.toLowerCase()} key={skintype.id} >{skintype.name}</Link>
         })
       }
       <Typography>Don't know your skin type?

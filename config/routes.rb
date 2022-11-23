@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :products
   resources :skin_types, only: [:index]
 
   # Routing logic: fallback requests for React Router.
