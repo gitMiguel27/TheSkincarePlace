@@ -8,7 +8,7 @@ function SkinType({ skintypes }) {
     let { id } = useParams();
 
     // Fetch skintype using keyword from url
-    let skintypeArray = skintypes.filter(skintype => skintype.name.toLowerCase() === id);
+    let skintypeArray = skintypes.filter(skintype => skintype.name === id);
     let skintype = skintypeArray[0];
 
     console.log('skintypeArray', skintypeArray);

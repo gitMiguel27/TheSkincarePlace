@@ -11,7 +11,7 @@ function Loading({ skintypes }) {
       <Typography variant='h5'>Choose Your Skin Type:</Typography>
       {
         skintypes.map(skintype => {
-          return <Link to={skintype.name.toLowerCase()} key={skintype.id} >{skintype.name}</Link>
+          return <Link to={skintype.name} key={skintype.id} >{skintype.name}</Link>
         })
       }
       <Typography>Don't know your skin type?
