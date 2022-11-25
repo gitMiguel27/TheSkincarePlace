@@ -8,15 +8,13 @@ function SkinType({ skintypes }) {
     let { id } = useParams();
 
     // Fetch skintype using keyword from url
-    let skintypeArray = skintypes.filter(skintype => skintype.name === id);
-    let skintype = skintypeArray[0];
+    let skintype = skintypes.find(skintype => skintype.name === id);
 
-    console.log('skintypeArray', skintypeArray);
     console.log('skintype', skintype);
-    console.log(skintype.products);
+    console.log('skintype products', skintype.products);
 
     return (
-        <div className='Skintype'>
+        <div className='skin-type'>
             <Grid2 container spacing={2}>
                 <Typography>About Your {skintype.name} Skin:</Typography>
                 <Typography>{skintype.body}</Typography>
