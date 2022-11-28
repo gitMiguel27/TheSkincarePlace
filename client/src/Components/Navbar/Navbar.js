@@ -121,7 +121,9 @@ function Navbar() {
               ))}
             </Box>
   
-            <Box sx={{ flexGrow: 0 }}>
+            {//TODO Figure out User stuff with MUI Avatar
+            }
+            {/* <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Profile Name" src="/static/images/avatar/2.jpg" />
@@ -149,7 +151,7 @@ function Navbar() {
                   </MenuItem>
                 ))}
               </Menu>
-            </Box>
+                </Box> */}
           </Toolbar>
         </Container>
       </AppBar>
