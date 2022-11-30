@@ -9,6 +9,9 @@ const theme = createTheme({
     primary: {
       main: '#210f08',
     }
+  },
+  typography: {
+    fontFamily: 'Helvitica',
   }
 });
 
