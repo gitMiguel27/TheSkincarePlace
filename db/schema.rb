@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_10_004541) do
+ActiveRecord::Schema.define(version: 2022_11_23_023035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "products", force: :cascade do |t|
+    t.string "link"
+    t.string "image"
+    t.string "concern"
+    t.string "company"
+    t.string "name"
+    t.integer "price"
+    t.bigint "skin_type_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["skin_type_id"], name: "index_products_on_skin_type_id"
+  end
 
   create_table "skin_types", force: :cascade do |t|
     t.string "name"
@@ -23,4 +36,5 @@ ActiveRecord::Schema.define(version: 2022_11_10_004541) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "products", "skin_types"
 end

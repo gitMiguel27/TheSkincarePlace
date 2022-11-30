@@ -5,10 +5,11 @@ import Loading from '../Loading/Loading';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import SkinType from '../SkinType/SkinType';
+import { CssBaseline } from '@mui/material';
 
 function App() {
   let location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const [skintypes, setSkintypes] = useState([]);
 
@@ -21,27 +22,20 @@ function App() {
     });
   }, []);
 
-  const [skintypeRoute, setSkintypeRoute] = useState(null);
-  const [selectedSkintype, setSelectedSkintype] = useState(null);
-
-  function selectSkintype(event) {
-    setSkintypeRoute(event.target.innerText.toLowerCase());
-    const skintypeArray = skintypes.filter(skintype => skintype.name === event.target.innerText)
-    const skintype = skintypeArray[0];
-    setSelectedSkintype(skintype);
-  };
-
   return (
     <div className="App">
+      <CssBaseline />
       {location.pathname.endsWith('/') || location.pathname.endsWith('/loading')? null : <Navbar/> }
         <Routes>
-          <Route exact path='/' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes} />}>
+          <Route exact path='/' element={<Loading skintypes={skintypes} />}>
           </Route>
-          <Route path='/loading' element={<Loading selectSkintype={selectSkintype} skintypes={skintypes} />}>
+          <Route path='/loading' element={<Loading skintypes={skintypes} />}>
           </Route>
 
-          {/* URL Parameters react router ; skintype should load data indepently from url parameter (no need to pass in) */}
-          <Route path={'/' + skintypeRoute} element={<SkinType selectedSkintype={selectedSkintype} />}>
+          {/* URL Parameters react router ; skintype should load data independently from url parameter (no need to pass in) */}
+          {/* <Route path={'/' + skintypeRoute} element={<SkinType selectedSkintype={selectedSkintype} />}>
+          </Route> */}
+          <Route path="/:id" element={<SkinType skintypes={skintypes}/>}>
           </Route>
           
           {/* <Route path='/login' element={<Login setUser={setUser} setPoints={setPoints}/>}>
