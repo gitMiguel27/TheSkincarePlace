@@ -1,6 +1,6 @@
 import './SkinType.css';
 import React from 'react';
-import { Card, CardMedia, Grid, Paper, Typography } from '@mui/material';
+import { Card, CardMedia, Divider, Paper, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { useParams } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ function SkinType({ skintypes }) {
     return (
         <div className='skin-type'>
             <Grid2 container rowSpacing={2} columnSpacing={2} display="flex" justifyContent="center" alignItems="center" >
-                <Grid2 container columnSpacing={4} display="flex" justifyContent="center" alignItems="center" className="grid-container">
+                <Grid2 container columnSpacing={4} display="flex" justifyContent="center" alignItems="center" className="grid-container1">
                     <Grid2 container spacing={4} xs={8} display="flex" justifyContent="center" alignItems="center" pl={15}>
                         <Grid2 item xs={12}>
                             <Typography>About Your {skintype.name} Skin:</Typography>
@@ -39,7 +39,8 @@ function SkinType({ skintypes }) {
                         </Grid2>
                     </Grid2>
                 </Grid2>
-                <Grid2 container xs={8} md={12} mt={8} mb={8} display="flex" justifyContent="center" alignItems="center" >
+
+                <Grid2 container xs={8} md={12} mt={8} mb={8} display="flex" justifyContent="center" alignItems="center" className="grid-container2" >
                     {products.map(product => {
                         return (
                             <Grid2 container md={3} mb={3} key={product.name}>
