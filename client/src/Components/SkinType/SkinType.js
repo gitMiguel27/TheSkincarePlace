@@ -1,8 +1,9 @@
 import './SkinType.css';
 import React from 'react';
-import { Card, CardMedia, Divider, Paper, Typography } from '@mui/material';
+import { Card, CardMedia, Paper, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { useParams } from 'react-router-dom';
+import GoToTop from '../GoToTop';
 
 function SkinType({ skintypes }) {
     let { id } = useParams();
@@ -93,6 +94,7 @@ function SkinType({ skintypes }) {
                     })}
                 </Grid2>
             </Grid2>
+            <GoToTop />
         </div>
     );
 }
