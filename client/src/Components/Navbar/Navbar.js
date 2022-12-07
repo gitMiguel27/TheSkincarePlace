@@ -1,11 +1,10 @@
 import React from "react";
-// import './Navbar.css';
 import { AppBar, Box, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Container, Avatar, Tooltip } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 // import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
-const pages = ['Recommended', 'About Us'];
+const pages = ['Recommended', 'About'];
 const settings = ['Login'];
 
 function Navbar() {
@@ -40,7 +39,7 @@ function Navbar() {
               sx={{
                 mr: 1,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                fontFamily: 'Roboto',
                 fontWeight: 500,
                 letterSpacing: '.1rem',
                 color: 'inherit',
@@ -81,8 +80,18 @@ function Navbar() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">
-                      <Link style={{ textDecoration: 'none', color: 'black' }} to={`/${page}`}>
+                    <Typography textAlign="center"
+                      sx={{
+                        mr: 1,
+                        display: { xs: 'none', md: 'flex' },
+                        fontFamily: 'Roboto',
+                        fontWeight: 500,
+                        letterSpacing: '.1rem',
+                        color: 'inherit',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page.toLowerCase()}`}>
                       {page}
                       </Link>
                     </Typography>
@@ -116,7 +125,7 @@ function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page}`}>{page}</Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page.toLowerCase()}`}>{page}</Link>
                 </Button>
               ))}
             </Box>
