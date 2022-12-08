@@ -1,10 +1,12 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Loading from '../Loading/Loading';
+import Landing from '../Landing/Landing';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import SkinType from '../SkinType/SkinType';
+import Recommended from '../Recommended/Recommended';
+import About from '../About/About';
 import { CssBaseline } from '@mui/material';
 
 function App() {
@@ -25,11 +27,15 @@ function App() {
   return (
     <div className="App">
       <CssBaseline />
-      {location.pathname.endsWith('/') || location.pathname.endsWith('/loading')? null : <Navbar/> }
+      {location.pathname.endsWith('/') || location.pathname.endsWith('/landing')? null : <Navbar/> }
         <Routes>
-          <Route exact path='/' element={<Loading skintypes={skintypes} />}>
+          <Route exact path='/' element={<Landing skintypes={skintypes} />}>
           </Route>
-          <Route path='/loading' element={<Loading skintypes={skintypes} />}>
+          <Route path='/landing' element={<Landing skintypes={skintypes} />}>
+          </Route>
+          <Route path='/Recommended' element={<Recommended skintypes={skintypes} />}>
+          </Route>
+          <Route path='/About' element={<About />}>
           </Route>
 
           {/* URL Parameters react router ; skintype should load data independently from url parameter (no need to pass in) */}
@@ -45,7 +51,7 @@ function App() {
           <Route path='/mypage' element={<MyPage user={user} setPoints={setPoints} points={points}/>}>
           </Route> */}
         </Routes>
-      {location.pathname.endsWith('/') || location.pathname.endsWith('/loading')? null : <Footer/> }
+      {location.pathname.endsWith('/') || location.pathname.endsWith('/landing')? null : <Footer/> }
     </div>
   );
 }
