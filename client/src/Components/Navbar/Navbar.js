@@ -117,6 +117,9 @@ function Navbar() {
             >
               <Link style={{ textDecoration: 'none', color: 'white' }} to={'/'}>The Skincare Place</Link>
             </Typography>
+            {
+            //TODO Figure out Skin Type page tabs and add to switch case
+            }
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button

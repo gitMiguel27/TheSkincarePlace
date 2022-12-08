@@ -22,7 +22,7 @@ function Expanded({ skintypes }) {
                     Don't know your skin type?
                 </Typography>
                 <Typography variant='h7' mb={1}>
-                    <a href='https://www.wikihow.com/Determine-Your-Skin-Type' target="_blank" rel="noopener noreferrer">Click Here</a>
+                    <a href='https://www.wikihow.com/Determine-Your-Skin-Type' target="_blank" rel="noopener noreferrer" >Click Here</a>
                 </Typography>
 
                 <Typography variant='h7' mb={1}>
