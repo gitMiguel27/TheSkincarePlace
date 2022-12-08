@@ -1,7 +1,8 @@
 import React from "react";
-import { AppBar, Box, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Container, Avatar, Tooltip } from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Container, Avatar, Tooltip, Icon, ListItem, ListItemIcon } from '@mui/material';
+import CleanHandsIcon from '@mui/icons-material/CleanHands';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import MenuIcon from '@mui/icons-material/Menu';
-// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
 const pages = ['Recommended', 'About'];
@@ -30,7 +31,6 @@ function Navbar() {
         <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -99,7 +99,6 @@ function Navbar() {
                 ))}
               </Menu>
             </Box>
-            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
               variant="h5"
               noWrap
@@ -123,9 +122,15 @@ function Navbar() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  sx={{ my: 2, color: 'white' }}
+                  startIcon={ { 
+                    'Recommended' : <CleanHandsIcon/>,
+                    'About' : <LightbulbIcon/> ,
+                 }[page] }
                 >
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page.toLowerCase()}`}>{page}</Link>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page.toLowerCase()}`}>
+                    {page}
+                  </Link>
                 </Button>
               ))}
             </Box>

@@ -1,7 +1,6 @@
 import React from "react";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { Card, CardMedia, Paper, Typography } from '@mui/material';
-import { Link } from "react-router-dom";
 
 function Recommended({ skintypes }) {
     return (
