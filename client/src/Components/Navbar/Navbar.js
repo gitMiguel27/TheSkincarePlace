@@ -1,22 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppBar, Box, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Container, Avatar, Tooltip, Icon, ListItem, ListItemIcon } from '@mui/material';
 import CleanHandsIcon from '@mui/icons-material/CleanHands';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import Face6Icon from '@mui/icons-material/Face6';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
-const pages = ['Recommended', 'About'];
+const pages = ['Recommended', 'About', 'Dry', 'Oily', 'Combination', 'Normal' ];
 const settings = ['Login'];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-  
+    const [anchorElCategories, setAnchorElCategories] = useState(null);
+    
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
     const handleOpenUserMenu = (event) => {
       setAnchorElUser(event.currentTarget);
+    };
+
+    const openCategoriesMenu = Boolean(anchorElCategories);
+    const handleClickCategories = (event) => {
+      setAnchorElCategories(event.currentTarget)
+    };
+
+    const handleCloseCategories = () => {
+      setAnchorElCategories(null);
     };
   
     const handleCloseNavMenu = () => {
@@ -108,8 +119,8 @@ function Navbar() {
                 mr: 1,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
+                fontFamily: 'Roboto',
+                fontWeight: 500,
                 letterSpacing: '.1rem',
                 color: 'inherit',
                 textDecoration: 'none',
@@ -131,7 +142,7 @@ function Navbar() {
                     'About' : <LightbulbIcon/> ,
                  }[page] }
                 >
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/${page.toLowerCase()}`}>
+                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`${page}`} >
                     {page}
                   </Link>
                 </Button>

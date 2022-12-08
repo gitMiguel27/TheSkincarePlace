@@ -33,9 +33,9 @@ function App() {
           </Route>
           <Route path='/landing' element={<Landing skintypes={skintypes} />}>
           </Route>
-          <Route path='/recommended' element={<Recommended skintypes={skintypes} />}>
+          <Route path='/Recommended' element={<Recommended skintypes={skintypes} />}>
           </Route>
-          <Route path='/about' element={<About />}>
+          <Route path='/About' element={<About />}>
           </Route>
 
           {/* URL Parameters react router ; skintype should load data independently from url parameter (no need to pass in) */}
