@@ -12,7 +12,7 @@ function Recommended({ skintypes }) {
                         <Grid2 container xs={12} my={5} mx={3} key={skintype.name}>
                             <Grid2 item xs={12} mb={3} ml={3}>
                                 <Typography variant='h5' sx={{ textDecoration: 'underline' }} >
-                                    Recommend For {skintype.name} Skin:
+                                    Recommended For {skintype.name} Skin:
                                 </Typography>
                             </Grid2>
                             {

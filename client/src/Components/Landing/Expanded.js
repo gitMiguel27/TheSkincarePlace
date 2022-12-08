@@ -12,7 +12,7 @@ function Expanded({ skintypes }) {
 
                 {
                     skintypes.map(skintype => {
-                    return <Typography variant='h4' mb={2} sx={{ fontWeight: 'bold' }} key={skintype.id}>
+                    return <Typography variant='h4' mb={2} sx={{ fontWeight: 'bold', boxShadow: 10 }} key={skintype.id}>
                             <Link to={skintype.name} className='skin-type-links' >{skintype.name}</Link>
                         </Typography>
                     })
