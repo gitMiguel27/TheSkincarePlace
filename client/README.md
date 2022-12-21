@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# The Skincare Place
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A ReactJS and Material UI front-end with Ruby on Rails back-end website about skin types, how to treat your skin type, and recommended products!
 
-## Available Scripts
+My goal with this project is to provide a straightforward manual for treating various skin types. The skin types I will focus on are: Dry, Oily, Combination and Normal skin. This app will be the place where people new to skincare or even experienced people can go to for advice and recommendations.
 
-In the project directory, you can run:
+As a user YOU can:
+* Switch through different skin types (changes interface/navigates you to new interface)
+* See recommended products based on your skin type
+* Log-in and post my own skincare routine (coming soon!)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to install this project using VS Code and/or Terminal
 
-The page will reload if you make edits.\
+1. Clone this project
+2. Npm install --prefix client for all front-end packages
+    * npm install @mui/material @emotion/react @emotion/styled
+    * npm install @mui/icons-material
+    * npm install react-router-dom
+    * npm install react-scroll
+
+## How to run the app in the development mode
+
+#### npm start --prefix client
+
+Runs the front-end
+Open http://localhost:3000 to view it in the browser.
+
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+#### rails s
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the back-end
+You must reload the entire app if you make changes to the back-end.
 
-### `npm run build`
+## How to tweak this project for your own uses
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Since this is my personal project, completed for Out In Tech's Mentorship Fall '22, I would advise for you to clone and rename this project to use for your own purposes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Known issues (Work in progress)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is still ongoing. The login/sign-up feature is not set up yet, while it is implemented and featured in some components. The navbar responsiveness to a smaller screen is not functional at the moment. These are coming soon!
 
-### `npm run eject`
+## Like this project?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Connect with me on LinkedIn:
+[My Profile](https://www.linkedin.com/in/miguel-nazario/)
