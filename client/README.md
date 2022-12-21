@@ -23,7 +23,7 @@ As a user YOU can:
 
 #### npm start --prefix client
 
-Runs the front-end
+Runs the front-end.
 Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
@@ -31,7 +31,7 @@ You will also see any lint errors in the console.
 
 #### rails s
 
-Runs the back-end
+Runs the back-end.
 You must reload the entire app if you make changes to the back-end.
 
 ## How to tweak this project for your own uses
