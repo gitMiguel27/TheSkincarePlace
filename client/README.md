@@ -2,7 +2,7 @@
 
 ## A ReactJS and Material UI front-end with Ruby on Rails back-end website about skin types, how to treat your skin type, and recommended products!
 
-My goal with this project is to provide a straightforward manual for treating various skin types. The skin types I will focus on are: Dry, Oily, Combination and Normal skin. This app will be the place where people new to skincare or even experienced people can go to for advice and recommendations.
+My goal with this project is to provide a straightforward manual for treating various skin types. The skin types this project focuses on are: Dry, Oily, Combination and Normal skin. This app will be the place where people new to skincare or even experienced people can go to for advice and recommendations.
 
 As a user YOU can:
 * Switch through different skin types (changes interface/navigates you to new interface)
