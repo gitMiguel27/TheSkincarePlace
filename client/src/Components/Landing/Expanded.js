@@ -24,14 +24,6 @@ function Expanded({ skintypes }) {
                 <Typography variant='h7' mb={1}>
                     <a href='https://www.wikihow.com/Determine-Your-Skin-Type' target="_blank" rel="noopener noreferrer" >Click Here</a>
                 </Typography>
-
-                <Typography variant='h7' mb={1}>
-                    Have an account?
-                </Typography>
-                <Typography variant='h7' mb={5}>
-                    <Link to="login">Log-In</Link>
-                </Typography>
-                
             </div>
         </div>
     )
