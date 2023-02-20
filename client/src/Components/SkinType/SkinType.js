@@ -12,9 +12,6 @@ function SkinType({ skintypes }) {
     let skintype = skintypes.find(skintype => skintype.name === id);
     let products = skintype.products
 
-    console.log('skintype', skintype);
-    console.log('skintype products', products);
-
     return (
         <div className='skin-type'>
             <Grid2 container rowSpacing={2} columnSpacing={2} display="flex" justifyContent="center" alignItems="center" >
